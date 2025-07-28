@@ -205,16 +205,16 @@ export function GamePlay({
               <div className="text-4xl md:text-6xl font-bold text-primary break-words">{currentWord}</div>
 
               {isPlaying ? (
-                <div className="flex justify-center space-x-4">
-                  <Button onClick={handleCorrect} size="lg" className="bg-green-500 hover:bg-green-600">
+                <div className="flex flex-col items-center space-y-4 w-full max-w-xs mx-auto">
+                  <Button onClick={handleCorrect} size="lg" className="bg-green-500 hover:bg-green-600 w-full">
                     <Check className="mr-2 h-5 w-5" />
                     ¡Correcto!
                   </Button>
-                  <Button onClick={handleSkip} variant="outline" size="lg">
+                  <Button onClick={handleSkip} variant="outline" size="lg" className="w-full bg-transparent">
                     <SkipForward className="mr-2 h-5 w-5" />
                     Pasar
                   </Button>
-                  <Button onClick={handleIncorrect} size="lg" variant="destructive">
+                  <Button onClick={handleIncorrect} size="lg" variant="destructive" className="w-full">
                     <X className="mr-2 h-5 w-5" />
                     Tiempo
                   </Button>
